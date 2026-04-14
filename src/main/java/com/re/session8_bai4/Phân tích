@@ -1,0 +1,19 @@
+Phân tích đoạn code
+
+Phân tích & Đề xuất đa giải pháp:
+Xác định Input/Output :
+Input :
+  - đưa vào username, password,confirmPassword
+
+Output :
+  - sử lý được dữ liệu , mật khẩu - confirm
+
+
+  | Tiêu chí                               |Giải pháp 1                            | Gi2i pháp 1 |
+  |Số lượng boilerplate code               | Nhiều đoạn lặp lại, khó bảo trì       |Ít hơn, tận dụng abstraction tốt  |
+  |Khả năng tái sử dụng cho các form khác  | Khó tái sử dụng, phải viết lại nhiều  | Dễ tái sử dụng, chỉ cần cấu hình lại |
+  |Nguyên tắc Separation of Concerns       | Vi phạm một phần, logic và UI trộn lẫn| Tách biệt rõ ràng giữa logic và UI |
+
+
+- Kết luận:
+ Giải pháp 2 là lựa chọn tốt nhất vì giảm boilerplate code, dễ tái sử dụng cho các form khác, và tuân thủ nguyên tắc Separation of Concerns, giúp hệ thống dễ mở rộng và bảo trì lâu dài
