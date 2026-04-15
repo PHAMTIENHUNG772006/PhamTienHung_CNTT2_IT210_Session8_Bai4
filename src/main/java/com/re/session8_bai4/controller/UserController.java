@@ -8,18 +8,21 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/")
-public class EmployeeController {
+public class UserController {
+    @GetMapping("/login")
+    public String showForm(Model model) {
+
+        model.addAttribute("employee", new UserDto());
+        return "employee-form";
+    }
 
     @PostMapping("/hr/add-employee")
-    public String saveEmployee(@Valid @ModelAttribute UserDto employeeDto,
+    public String saveEmployee(@Valid @ModelAttribute("employee") UserDto employeeDto,
                                BindingResult result,
-                               Model model
-
-    ) {
+                               Model model) {
 
         if (result.hasErrors()) {
 
-            model.addAttribute("employee", employeeDto);
             return "employee-form";
         }
 

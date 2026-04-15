@@ -19,6 +19,10 @@ public class PasswordMatchesValidator
             return false;
         }
 
+        context.buildConstraintViolationWithTemplate("Mật khẩu không khớp")
+                .addPropertyNode("confirmPassword")
+                .addConstraintViolation();
+
         return password.equals(confirmPassword);
     }
 }
