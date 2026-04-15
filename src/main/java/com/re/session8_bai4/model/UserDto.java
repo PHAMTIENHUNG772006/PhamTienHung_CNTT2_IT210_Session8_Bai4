@@ -2,13 +2,18 @@ package com.re.session8_bai4.model;
 
 
 import com.re.session8_bai4.custom_validator.PasswordMatches;
+import jakarta.validation.constraints.NotBlank;
 
 @PasswordMatches
 public class UserDto {
-   private  String username;
-    private String password;
-    private String confirmPassword;
+    @NotBlank(message = "Username không được để trống")
+    private String username;
 
+    @NotBlank(message = "Password không được để trống")
+    private String password;
+
+    @NotBlank(message = "Confirm Password không được để trống")
+    private String confirmPassword;
     public UserDto () {
     }
 
